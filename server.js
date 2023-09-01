@@ -11,12 +11,7 @@ app.use(express.json({ urlencoded: true }));
 app.use(cors());
 
 mongoose
-  .connect("mongodb://localhost:27017/summerShop", {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // user: "ramingh",
-    // pass: "ramingh",
-  })
+  .connect("mongodb://localhost:27017/summerShop")
   .then(() => console.log("Connected to MongoDb"))
   .catch((err) => {
     console.log("Cant Connected To MongoDb");
